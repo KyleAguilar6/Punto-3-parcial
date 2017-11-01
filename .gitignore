@@ -1,22 +1,37 @@
-# Compiled class file
-*.class
+	import java.util.Scanner;
 
-# Log file
-*.log
+	public class Parcial_3 {
 
-# BlueJ files
-*.ctxt
-
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
-
-# Package Files #
-*.jar
-*.war
-*.ear
-*.zip
-*.tar.gz
-*.rar
-
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
+		public static void main(String[] args) {
+			
+			Scanner sc = new Scanner (System.in);
+			System.out.println("Digite tamaño del arreglo");
+			int T = sc.nextInt();
+			
+			int Tm [] = new int [T] ;
+			
+			System.out.println("Escriba los numeros dentro del arreglo");
+			
+			for (int i = 0; i <  Tm.length; i++) {
+				
+				Tm[i] = sc.nextInt(); 
+				
+			}
+			
+			//int Aux_1 = 0;
+			int Aux_2 = 0;
+			
+			for (int i = 0; i < Tm.length; i++) {
+				for (int j = 0; j < Tm.length; j++) {
+					
+					if(!(Tm[i] == Tm[j])){
+						
+						Aux_2 = Tm[j];
+						
+					}
+			}
+			
+		}
+			System.out.println("El Numero que no se repite es "	+ Aux_2);
+	}
+}
